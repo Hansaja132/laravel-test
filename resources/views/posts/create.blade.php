@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create posts</title>
+</head>
+
+<body>
+    <h1>Create Post</h1>
+    <form action="{{ route('posts.store') }}" method="POST">
+        @csrf
+        <div>
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" required>
+        </div>
+        <div>
+            <label for="body">Body:</label>
+            <textarea name="body" id="body" required></textarea>
+        </div>
+        <button type="submit">Create Post</button>
+    </form>
+</body>
+
+</html>

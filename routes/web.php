@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -50,3 +51,5 @@ Route::post('/formsubmit', function (Request $request) {
 
     echo "Form submitted successfully! <br> Name: " . $name . ", Email: " . $email;
 })->name("formsubmit");
+
+Route::resource('posts', PostController::class);
