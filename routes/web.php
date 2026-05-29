@@ -52,4 +52,5 @@ Route::post('/formsubmit', function (Request $request) {
     echo "Form submitted successfully! <br> Name: " . $name . ", Email: " . $email;
 })->name("formsubmit");
 
+// route that points to a resource controller
 Route::resource('posts', PostController::class);
